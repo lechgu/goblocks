@@ -12,4 +12,5 @@ RUN rm -rf cmd/server/html \
 
 FROM scratch  
 COPY --from=build /app/goblocks /bin/
+ENV PORT=80
 ENTRYPOINT [ "/bin/goblocks" ]
